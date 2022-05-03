@@ -1,6 +1,7 @@
 import {Button, Grid} from "@mui/material";
 import {Face} from "@mui/icons-material";
 import {Navigate, useNavigate} from "react-router-dom";
+import {useTriggerScroll} from "../context/TriggerScrollContext";
 
 function RaceNav() {
     const buttonText = [
@@ -32,9 +33,11 @@ function RaceNav() {
     ]
 
     const navigate = useNavigate()
+    const {triggerScroll, setTriggerScroll} = useTriggerScroll()
 
     function handleClick(path: string) {
         navigate(path)
+        setTriggerScroll(!triggerScroll)
     }
 
     return (

@@ -10,14 +10,17 @@ import Location from "../../images/cityscape.png"
 import Religion from "../../images/bible.png"
 import Degree from "../../images/degree.png"
 import Private from "../../images/private.png"
+import {useTriggerScroll} from "../../context/TriggerScrollContext";
 
 function CaucasianMain() {
+    const {triggerScroll} = useTriggerScroll()
+
     useEffect(() => {
         window.scrollTo({
             top: window.innerHeight,
             behavior: "smooth"
         })
-    }, [])
+    }, [triggerScroll])
 
     return (
         <Grid container justifyContent={"center"}>

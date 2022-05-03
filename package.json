@@ -23,6 +23,7 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-scroll-to-top": "^1.0.8",
     "smoothscroll-polyfill": "^0.4.4",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
