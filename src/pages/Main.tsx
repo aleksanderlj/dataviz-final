@@ -2,7 +2,6 @@ import {Grid} from "@mui/material";
 import RaceNav from "./RaceNav";
 import {Route, Routes} from "react-router-dom"
 import CaucasianMain from "./caucasian/CaucasianMain";
-import {useRef} from "react";
 
 function Main() {
     return (
