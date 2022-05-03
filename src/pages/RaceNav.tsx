@@ -1,5 +1,4 @@
-import {Button, Grid, Stack} from "@mui/material";
-import {Face} from "@mui/icons-material";
+import {Grid, Stack} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import {useTriggerScroll} from "../context/TriggerScrollContext";
 import Image from "mui-image";
@@ -7,27 +6,37 @@ import White from "../images/white_person.png"
 import Black from "../images/black_person.png"
 import Asian from "../images/asian_person.png"
 import Woman from "../images/woman_person.png"
+import GongMP3 from "../audio/gong.mp3"
+import SongMP3 from "../audio/song.mp3"
+import {useState} from "react";
 
 function RaceNav() {
-    const buttonText = [
+    const [song, setSong] = useState(new Audio(SongMP3))
+    const [gong, setGong] = useState(new Audio(GongMP3))
+
+    const personInfo = [
         {
             race: "Caucasian",
             image: White,
+            audio: song,
             path: "/caucasian"
         },
         {
             race: "African American",
             image: Black,
+            audio: gong,
             path: "/africanamerican"
         },
         {
             race: "Asian",
             image: Asian,
+            audio: gong,
             path: "/asian"
         },
         {
             race: "Female",
             image: Woman,
+            audio: gong,
             path: "/female"
         }
     ]
@@ -35,9 +44,18 @@ function RaceNav() {
     const navigate = useNavigate()
     const {triggerScroll, setTriggerScroll} = useTriggerScroll()
 
+
     function handleClick(path: string) {
         navigate(path)
         setTriggerScroll(!triggerScroll)
+    }
+
+    function handleHover(sound: HTMLAudioElement) {
+        personInfo.map((x) => {
+            x.audio.pause();
+            x.audio.currentTime = 0;
+        })
+        sound.play()
     }
 
     return (
@@ -47,11 +65,11 @@ function RaceNav() {
             }}>
                 <Stack direction={"row"} spacing={6} height={"70%"}>
                 {
-                    buttonText.map((x) => (
+                    personInfo.map((x) => (
                             <Image
                                 src={x.image}
                                 onClick={() => handleClick(x.path)}
-                                onMouseEnter={() => console.log("Hello")}
+                                onMouseEnter={() => handleHover(x.audio)}
                                 fit={"contain"}
                                 sx={{
                                     cursor: "pointer"
