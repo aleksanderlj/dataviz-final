@@ -6,10 +6,12 @@ import ScrollToTop from "react-scroll-to-top";
 import Black from "./persons/Black";
 import Asian from "./persons/Asian";
 import Woman from "./persons/Woman";
+import IntroPage from "./IntroPage";
 
 function Main() {
     return (
         <Grid container justifyContent={"center"} sx={{ pb: "2rem"}}>
+            <IntroPage/>
             <RaceNav/>
             <ScrollToTop smooth/>
             <Grid container item justifyContent={"center"} xs={12}>

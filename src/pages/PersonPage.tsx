@@ -26,7 +26,7 @@ function PersonPage(props: PersonPageProps) {
 
     useEffect(() => {
         window.scrollTo({
-            top: window.innerHeight,
+            top: window.innerHeight * 2,
             behavior: "smooth"
         })
     }, [triggerScroll])
