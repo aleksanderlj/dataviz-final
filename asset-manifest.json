@@ -1,21 +1,25 @@
 {
   "files": {
     "main.css": "/dataviz-final/static/css/main.073c9b0a.css",
-    "main.js": "/dataviz-final/static/js/main.2e98ea4f.js",
+    "main.js": "/dataviz-final/static/js/main.1cf201f1.js",
     "static/js/787.aea70ee3.chunk.js": "/dataviz-final/static/js/787.aea70ee3.chunk.js",
     "static/media/audio_icon.png": "/dataviz-final/static/media/audio_icon.f2cc2d97ddb3bc272c05.png",
+    "static/media/Percent_of_total_enrollment_that_are_Black_or_African_American.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_Black_or_African_American.3456a673e165566ad00d.png",
+    "static/media/Percent_of_total_enrollment_that_are_Asian.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_Asian.9f67b309b31309a57ab6.png",
+    "static/media/Percent_of_total_enrollment_that_are_White.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_White.9368864e5638b86f2d1d.png",
     "static/media/degree.png": "/dataviz-final/static/media/degree.8a812430e946e9e2a196.png",
+    "static/media/Boxplot_Black.png": "/dataviz-final/static/media/Boxplot_Black.3853167d91cba3ca031c.png",
     "static/media/cityscape.png": "/dataviz-final/static/media/cityscape.49ccec98e79de5cc16c4.png",
-    "static/media/Percent_of_total_enrollment_that_are_White.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_White.2b2a8944dff48c55c4c0.png",
-    "static/media/Boxplot_White.png": "/dataviz-final/static/media/Boxplot_White.8c14d8af0ecd154391e0.png",
+    "static/media/Boxplot_Asian.png": "/dataviz-final/static/media/Boxplot_Asian.f14200a4fb3b49a4ad76.png",
+    "static/media/Boxplot_White.png": "/dataviz-final/static/media/Boxplot_White.184113c8d33fdc69a7c0.png",
     "static/media/bible.png": "/dataviz-final/static/media/bible.aac0ff4aab5c08a41271.png",
     "index.html": "/dataviz-final/index.html",
     "main.073c9b0a.css.map": "/dataviz-final/static/css/main.073c9b0a.css.map",
-    "main.2e98ea4f.js.map": "/dataviz-final/static/js/main.2e98ea4f.js.map",
+    "main.1cf201f1.js.map": "/dataviz-final/static/js/main.1cf201f1.js.map",
     "787.aea70ee3.chunk.js.map": "/dataviz-final/static/js/787.aea70ee3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.2e98ea4f.js"
+    "static/js/main.1cf201f1.js"
   ]
 }
