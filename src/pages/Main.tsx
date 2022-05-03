@@ -5,10 +5,11 @@ import Caucasian from "./persons/Caucasian";
 import ScrollToTop from "react-scroll-to-top";
 import Black from "./persons/Black";
 import Asian from "./persons/Asian";
+import Woman from "./persons/Woman";
 
 function Main() {
     return (
-        <Grid container justifyContent={"center"}>
+        <Grid container justifyContent={"center"} sx={{ pb: "2rem"}}>
             <RaceNav/>
             <ScrollToTop smooth/>
             <Grid container item justifyContent={"center"} xs={12}>
@@ -16,7 +17,7 @@ function Main() {
                     <Route path={"/caucasian"} element={<Caucasian/>}/>
                     <Route path={"/africanamerican"} element={<Black/>}/>
                     <Route path={"/asian"} element={<Asian/>}/>
-                    <Route path={"/female"} element={<></>}/>
+                    <Route path={"/female"} element={<Woman/>}/>
                 </Routes>
             </Grid>
         </Grid>
