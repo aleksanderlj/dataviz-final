@@ -11,6 +11,8 @@ import SongMP3 from "../audio/song.mp3"
 import {useState} from "react";
 
 function RaceNav() {
+    const bgcolor = "salmon"
+
     const [song, setSong] = useState(new Audio(SongMP3))
     const [gong, setGong] = useState(new Audio(GongMP3))
 
@@ -59,7 +61,7 @@ function RaceNav() {
     }
 
     return (
-        <Grid container justifyContent={"center"} alignItems={"center"} height={"100vh"}>
+        <Grid container justifyContent={"center"} alignItems={"center"} height={"100vh"} sx={{ bgcolor: bgcolor }}>
             <Grid container item xs={8} justifyContent={"center"} alignItems={"center"} sx={{
                 height: "100%"
             }}>
