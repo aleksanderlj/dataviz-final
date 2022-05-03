@@ -6,32 +6,29 @@ import Image from "mui-image";
 import White from "../images/white_person.png"
 import Black from "../images/black_person.png"
 import Asian from "../images/asian_person.png"
+import Woman from "../images/woman_person.png"
 
 function RaceNav() {
     const buttonText = [
         {
             race: "Caucasian",
             image: White,
-            path: "/caucasian",
-            color: "primary"
+            path: "/caucasian"
         },
         {
             race: "African American",
             image: Black,
-            path: "/africanamerican",
-            color: "primary"
+            path: "/africanamerican"
         },
         {
             race: "Asian",
             image: Asian,
-            path: "/asian",
-            color: "primary"
+            path: "/asian"
         },
         {
             race: "Female",
-            image: "null",
-            path: "/female",
-            color: "primary"
+            image: Woman,
+            path: "/female"
         }
     ]
 
@@ -54,6 +51,7 @@ function RaceNav() {
                             <Image
                                 src={x.image}
                                 onClick={() => handleClick(x.path)}
+                                onMouseEnter={() => console.log("Hello")}
                                 fit={"contain"}
                                 sx={{
                                     cursor: "pointer"
