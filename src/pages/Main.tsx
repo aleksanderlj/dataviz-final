@@ -14,7 +14,6 @@ function Main() {
                     <Route path={"/caucasian"} element={<Caucasian/>}/>
                     <Route path={"/africanamerican"} element={<></>}/>
                     <Route path={"/asian"} element={<></>}/>
-                    <Route path={"/male"} element={<></>}/>
                     <Route path={"/female"} element={<></>}/>
                 </Routes>
             </Grid>

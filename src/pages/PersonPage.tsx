@@ -15,6 +15,10 @@ export interface PersonPageProps {
     mapText: string;
     featureImportance: string;
     featureImportanceText: string;
+    locationPerc: number;
+    privatePerc: number;
+    religiousPerc: number;
+    degreePerc: number;
     boxPlot: string;
     boxPlotText: string;
 }
@@ -51,10 +55,10 @@ function PersonPage(props: PersonPageProps) {
 
                 <Grid item xs={6}>
                     <Stack direction={"row"} spacing={6}>
-                        <FeatureBox text={"100%"} src={Location} tooltip={"University in high-population area"}/>
-                        <FeatureBox text={"100%"} src={Private} tooltip={"Private institution"}/>
-                        <FeatureBox text={"100%"} src={Religion} tooltip={"Religious affiliation"}/>
-                        <FeatureBox text={"100%"} src={Degree} tooltip={"Highest degree offered"}/>
+                        <FeatureBox percent={props.locationPerc} src={Location} tooltip={"University in high-population area"}/>
+                        <FeatureBox percent={props.privatePerc} src={Private} tooltip={"Private institution"}/>
+                        <FeatureBox percent={props.religiousPerc} src={Religion} tooltip={"Religious affiliation"}/>
+                        <FeatureBox percent={props.degreePerc} src={Degree} tooltip={"Highest degree offered"}/>
                     </Stack>
                 </Grid>
 

@@ -2,7 +2,7 @@ import {Grid, Tooltip, Typography, Box} from "@mui/material";
 import Image from "mui-image"
 
 interface FeatureBoxProps {
-    text?: string;
+    percent: number;
     src: string;
     tooltip: string;
 }
@@ -16,12 +16,13 @@ function FeatureBox(props: FeatureBoxProps){
                     <Typography sx={{
                         border: "1px solid",
                         mt: "1rem",
+                        color: props.percent > 0 ? "green" : "red",
                         bgcolor: "grey.100",
                         borderRadius: 2,
                         borderColor: "grey.300",
                         fontWeight: "700"
                     }}>
-                        {props.text}
+                        {`${Math.round(props.percent)}%`}
                     </Typography>
                 </Box>
             </Tooltip>
