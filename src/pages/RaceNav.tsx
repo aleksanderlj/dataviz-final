@@ -1,4 +1,4 @@
-import {Grid, Stack} from "@mui/material";
+import {Grid, Stack, Tooltip, Box} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import {useTriggerScroll} from "../context/TriggerScrollContext";
 import Image from "mui-image";
@@ -64,19 +64,23 @@ function RaceNav() {
                 height: "100%"
             }}>
                 <Stack direction={"row"} spacing={6} height={"70%"}>
-                {
-                    personInfo.map((x) => (
-                            <Image
-                                src={x.image}
-                                onClick={() => handleClick(x.path)}
-                                onMouseEnter={() => handleHover(x.audio)}
-                                fit={"contain"}
-                                sx={{
-                                    cursor: "pointer"
-                                }}
-                            />
-                    ))
-                }
+                    {
+                        personInfo.map((x) => (
+                            <Tooltip title={"Click me!"} placement={"top"} arrow open>
+                                <Box>
+                                <Image
+                                    src={x.image}
+                                    onClick={() => handleClick(x.path)}
+                                    onMouseEnter={() => handleHover(x.audio)}
+                                    fit={"contain"}
+                                    sx={{
+                                        cursor: "pointer"
+                                    }}
+                                />
+                                </Box>
+                            </Tooltip>
+                        ))
+                    }
                 </Stack>
             </Grid>
         </Grid>

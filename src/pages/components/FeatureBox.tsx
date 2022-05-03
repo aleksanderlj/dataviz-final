@@ -7,10 +7,10 @@ interface FeatureBoxProps {
     tooltip: string;
 }
 
-function FeatureBox(props: FeatureBoxProps){
+function FeatureBox(props: FeatureBoxProps) {
     return (
         <Grid item xs={12}>
-            <Tooltip title={props.tooltip}>
+            <Tooltip title={props.tooltip} placement={"top"}>
                 <Box>
                     <Image src={props.src} fit={"contain"} duration={100}/>
                     <Typography sx={{

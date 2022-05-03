@@ -35,9 +35,19 @@ function PersonPage(props: PersonPageProps) {
         return str.replaceAll("{target}", props.target)
     }
 
+    function capitalizeFirstLetter(str: string) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
     return (
         <Grid container justifyContent={"center"}>
             <Grid container item xs={8} justifyContent={"center"} rowSpacing={4}>
+                <Grid item xs={12} sx={{ mt: "2rem" }}>
+                    <Typography variant={"h4"}>
+                        {`${capitalizeFirstLetter(props.target)} in American Universities`}
+                    </Typography>
+                </Grid>
+
                 <Grid item xs={8}>
                     <Typography variant={"h6"}>
                         {"Under- and overrepresentation in each state"}
@@ -76,6 +86,12 @@ function PersonPage(props: PersonPageProps) {
                 <Box width={"100%"}/>
 
                 <TextWithAudio text={replaceTarget("The boxplot tells us a little about how the ratio of enrolled {target} are affected by cost of tuition.")}/>
+
+                <Grid item xs={12} sx={{ mt: "4rem" }}>
+                    <Typography variant={"h6"}>
+                        {"Scroll to the top of the page and hear what one of the other characters have to say!"}
+                    </Typography>
+                </Grid>
             </Grid>
         </Grid>
     )
