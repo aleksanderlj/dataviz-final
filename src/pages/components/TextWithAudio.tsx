@@ -17,7 +17,7 @@ function TextWithAudio(props: TextWithAudioProps){
                 </Box>
             </Grid>
             <Grid item xs={11}>
-                <Typography>
+                <Typography sx={{ whiteSpace: "pre-line" }}>
                     {props.text}
                 </Typography>
             </Grid>

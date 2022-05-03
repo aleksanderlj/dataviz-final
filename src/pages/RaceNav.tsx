@@ -1,27 +1,35 @@
-import {Button, Grid} from "@mui/material";
+import {Button, Grid, Stack} from "@mui/material";
 import {Face} from "@mui/icons-material";
 import {useNavigate} from "react-router-dom";
 import {useTriggerScroll} from "../context/TriggerScrollContext";
+import Image from "mui-image";
+import White from "../images/white_person.png"
+import Black from "../images/black_person.png"
+import Asian from "../images/asian_person.png"
 
 function RaceNav() {
     const buttonText = [
         {
             race: "Caucasian",
+            image: White,
             path: "/caucasian",
             color: "primary"
         },
         {
             race: "African American",
+            image: Black,
             path: "/africanamerican",
             color: "primary"
         },
         {
             race: "Asian",
+            image: Asian,
             path: "/asian",
             color: "primary"
         },
         {
             race: "Female",
+            image: "null",
             path: "/female",
             color: "primary"
         }
@@ -37,20 +45,24 @@ function RaceNav() {
 
     return (
         <Grid container justifyContent={"center"} alignItems={"center"} height={"100vh"}>
-            {
-                buttonText.map((x) => (
-                    <Grid item xs={2}>
-                        <Button
-                            variant={"contained"}
-                            startIcon={<Face/>}
-                            sx={{ width: "90%"}}
-                            onClick={() => handleClick(x.path)}
-                        >
-                            {x.race}
-                        </Button>
-                    </Grid>
-                ))
-            }
+            <Grid container item xs={8} justifyContent={"center"} alignItems={"center"} sx={{
+                height: "100%"
+            }}>
+                <Stack direction={"row"} spacing={6} height={"70%"}>
+                {
+                    buttonText.map((x) => (
+                            <Image
+                                src={x.image}
+                                onClick={() => handleClick(x.path)}
+                                fit={"contain"}
+                                sx={{
+                                    cursor: "pointer"
+                                }}
+                            />
+                    ))
+                }
+                </Stack>
+            </Grid>
         </Grid>
     )
 }

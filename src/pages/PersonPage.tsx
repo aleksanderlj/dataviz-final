@@ -11,16 +11,14 @@ import Private from "../images/private.png"
 import {useTriggerScroll} from "../context/TriggerScrollContext";
 
 export interface PersonPageProps {
+    target: string;
     map: string; // eg. plots/map_white.html
-    mapText: string;
     featureImportance: string;
-    featureImportanceText: string;
     locationPerc: number;
     privatePerc: number;
     religiousPerc: number;
     degreePerc: number;
     boxPlot: string;
-    boxPlotText: string;
 }
 
 function PersonPage(props: PersonPageProps) {
@@ -32,6 +30,10 @@ function PersonPage(props: PersonPageProps) {
             behavior: "smooth"
         })
     }, [triggerScroll])
+
+    function replaceTarget(str: string){
+        return str.replaceAll("{target}", props.target)
+    }
 
     return (
         <Grid container justifyContent={"center"}>
@@ -46,7 +48,10 @@ function PersonPage(props: PersonPageProps) {
                     }
                 </Grid>
 
-                <TextWithAudio text={props.mapText}/>
+                <TextWithAudio text={replaceTarget("This map shows how {target} are represented by university enrollment in regard to how many {target} live in the given state.\n" +
+                    "The red areas represent states where the average enrollment ratio of {target} is less than the ratio of {target} in that state's population." +
+                    "This means {target} are underrepresented in those states.\n" +
+                    "The green areas represent the opposite, meaning an overrepresentation.")}/>
 
                 <Grid item xs={8}>
                     <Image src={props.featureImportance} duration={100}/>
@@ -62,14 +67,15 @@ function PersonPage(props: PersonPageProps) {
                     </Stack>
                 </Grid>
 
-                <TextWithAudio text={props.featureImportanceText}/>
+                <TextWithAudio text={replaceTarget("The above graph shows what features are most important in deciding the enrollment of {target} in universities,\n and in which direction.\n" +
+                    "Below the graph we've also highlighted some interesting features that seem to be of importance for all races and genders\n(try to hover over them!).")}/>
 
                 <Grid item xs={12}>
                     <Image src={props.boxPlot} duration={100}/>
                 </Grid>
                 <Box width={"100%"}/>
 
-                <TextWithAudio text={props.boxPlotText}/>
+                <TextWithAudio text={replaceTarget("The boxplot tells us a little about how the ratio of enrolled {target} are affected by cost of tuition.")}/>
             </Grid>
         </Grid>
     )
