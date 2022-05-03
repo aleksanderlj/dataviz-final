@@ -1,16 +1,21 @@
 {
   "files": {
     "main.css": "/dataviz-final/static/css/main.073c9b0a.css",
-    "main.js": "/dataviz-final/static/js/main.f6d4c7bc.js",
+    "main.js": "/dataviz-final/static/js/main.918aab8f.js",
     "static/js/787.aea70ee3.chunk.js": "/dataviz-final/static/js/787.aea70ee3.chunk.js",
-    "static/media/logo.svg": "/dataviz-final/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/audio_icon.png": "/dataviz-final/static/media/audio_icon.f2cc2d97ddb3bc272c05.png",
+    "static/media/degree.png": "/dataviz-final/static/media/degree.8a812430e946e9e2a196.png",
+    "static/media/cityscape.png": "/dataviz-final/static/media/cityscape.49ccec98e79de5cc16c4.png",
+    "static/media/Percent_of_total_enrollment_that_are_White.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_White.2b2a8944dff48c55c4c0.png",
+    "static/media/Boxplot_White.png": "/dataviz-final/static/media/Boxplot_White.8c14d8af0ecd154391e0.png",
+    "static/media/bible.png": "/dataviz-final/static/media/bible.aac0ff4aab5c08a41271.png",
     "index.html": "/dataviz-final/index.html",
     "main.073c9b0a.css.map": "/dataviz-final/static/css/main.073c9b0a.css.map",
-    "main.f6d4c7bc.js.map": "/dataviz-final/static/js/main.f6d4c7bc.js.map",
+    "main.918aab8f.js.map": "/dataviz-final/static/js/main.918aab8f.js.map",
     "787.aea70ee3.chunk.js.map": "/dataviz-final/static/js/787.aea70ee3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.f6d4c7bc.js"
+    "static/js/main.918aab8f.js"
   ]
 }
