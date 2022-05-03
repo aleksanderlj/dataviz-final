@@ -21,11 +21,6 @@ function RaceNav() {
             color: "primary"
         },
         {
-            race: "Male",
-            path: "/male",
-            color: "primary"
-        },
-        {
             race: "Female",
             path: "/female",
             color: "primary"
