@@ -1,6 +1,6 @@
 import {Button, Grid} from "@mui/material";
 import {Face} from "@mui/icons-material";
-import {Navigate, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useTriggerScroll} from "../context/TriggerScrollContext";
 
 function RaceNav() {
