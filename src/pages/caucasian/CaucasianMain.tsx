@@ -1,9 +1,17 @@
 import {Box, Grid} from "@mui/material";
 import FoliumMap from "../components/FoliumMap";
-//import {ReactComponent as FeatureImportance} from "../../images/plots/Percent_of_total_enrollment_that_are_White.svg"
 import Image from "mui-image"
+import featureImportance from "../../images/plots/Percent_of_total_enrollment_that_are_White.png"
+import {useEffect} from "react";
 
 function CaucasianMain() {
+    useEffect(() => {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth"
+        })
+    }, [])
+
     return (
         <Grid container justifyContent={"center"}>
             <Grid container item xs={8} justifyContent={"center"}>
@@ -11,7 +19,7 @@ function CaucasianMain() {
                     <FoliumMap src={"dataviz-final/plots/map_white.html"} />
                 </Grid>
                 <Grid item xs={8}>
-                    //<FeatureImportance/>
+                    <Image src={featureImportance} duration={100}/>
                 </Grid>
             </Grid>
         </Grid>

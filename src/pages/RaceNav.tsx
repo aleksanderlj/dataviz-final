@@ -20,18 +20,13 @@ function RaceNav() {
             color: "primary"
         },
         {
-            race: "2+ races",
-            path: "/twoplusraces",
+            race: "Male",
+            path: "/male",
             color: "primary"
         },
         {
-            race: "Native American",
-            path: "/nativeamerican",
-            color: "primary"
-        },
-        {
-            race: "Pacific Islander",
-            path: "/pacificislander",
+            race: "Female",
+            path: "/female",
             color: "primary"
         }
     ]
@@ -43,7 +38,7 @@ function RaceNav() {
     }
 
     return (
-        <Grid container justifyContent={"center"}>
+        <Grid container justifyContent={"center"} alignItems={"center"} height={"100vh"}>
             {
                 buttonText.map((x) => (
                     <Grid item xs={2}>
