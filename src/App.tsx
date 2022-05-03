@@ -8,7 +8,7 @@ function App() {
   return (
       <div className="App">
         <Helmet>
-          <title>{"American Universities - DataViz"}</title>
+          <title>{"Equality in American Universities"}</title>
         </Helmet>
         <Main />
       </div>
