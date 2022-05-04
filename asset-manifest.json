@@ -1,10 +1,13 @@
 {
   "files": {
     "main.css": "/dataviz-final/static/css/main.073c9b0a.css",
-    "main.js": "/dataviz-final/static/js/main.506eced4.js",
+    "main.js": "/dataviz-final/static/js/main.35277199.js",
     "static/js/787.aea70ee3.chunk.js": "/dataviz-final/static/js/787.aea70ee3.chunk.js",
+    "static/media/song.mp3": "/dataviz-final/static/media/song.e03529f1257a604b2668.mp3",
+    "static/media/gong.mp3": "/dataviz-final/static/media/gong.95e6ba3007f4e96ef2a4.mp3",
     "static/media/black_person.png": "/dataviz-final/static/media/black_person.d14e56bc692de857511d.png",
     "static/media/white_person.png": "/dataviz-final/static/media/white_person.a4ce121ff223707271ed.png",
+    "static/media/woman_person.png": "/dataviz-final/static/media/woman_person.e98fcdfa90dfea2ce7eb.png",
     "static/media/asian_person.png": "/dataviz-final/static/media/asian_person.498338e3c0009b3508e4.png",
     "static/media/audio_icon.png": "/dataviz-final/static/media/audio_icon.f2cc2d97ddb3bc272c05.png",
     "static/media/Percent_of_total_enrollment_that_are_Black_or_African_American.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_Black_or_African_American.3456a673e165566ad00d.png",
@@ -20,11 +23,11 @@
     "static/media/bible.png": "/dataviz-final/static/media/bible.aac0ff4aab5c08a41271.png",
     "index.html": "/dataviz-final/index.html",
     "main.073c9b0a.css.map": "/dataviz-final/static/css/main.073c9b0a.css.map",
-    "main.506eced4.js.map": "/dataviz-final/static/js/main.506eced4.js.map",
+    "main.35277199.js.map": "/dataviz-final/static/js/main.35277199.js.map",
     "787.aea70ee3.chunk.js.map": "/dataviz-final/static/js/787.aea70ee3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.506eced4.js"
+    "static/js/main.35277199.js"
   ]
 }
