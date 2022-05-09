@@ -108,14 +108,16 @@ function PersonPage(props: PersonPageProps) {
 
                 <TextBody text={replaceTarget("The above graph shows what features are most important in deciding the enrollment of {target} in universities,\n and in which direction.\n" +
                     "Below the graph we've also highlighted some interesting features that seem to be of importance for all races and genders\n(try to hover over them!).")}/>
-
-                <Grid item xs={12}>
-                    <Image src={props.boxplot} duration={100}/>
-                </Grid>
-
-                <Grid container item xs={2} alignItems={"center"}>
+            </Grid>
+            <Grid container item xs={12} justifyContent={"center"} rowSpacing={4}>
+                <Grid container item xs={1.3} justifyContent={"right"} alignItems={"center"}>
                     <AudioButton id={7} audio={props.boxplotSound} />
                 </Grid>
+
+                <Grid item xs={9.4}>
+                    <Image src={props.boxplot} duration={100}/>
+                </Grid>
+                <Grid item xs={1.3} />
 
                 <TextBody xs={9} text={replaceTarget("The boxplot tells us a little about how the ratio of enrolled {target} are affected by cost of tuition.")}/>
 
