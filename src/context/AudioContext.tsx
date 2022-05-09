@@ -20,6 +20,7 @@ export const AudioProvider = ({children}: {children?: JSX.Element}) => {
             audio.pause()
             audio.currentTime = 0
         }
+        newAudio.onended = stopAudio
         setAudio(newAudio)
         newAudio.play()
         setId(audioId)
