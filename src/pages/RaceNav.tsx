@@ -11,10 +11,7 @@ import asian1MP3 from "../audio/asian1.mp3"
 import white1MP3 from "../audio/white1.mp3"
 import woman1MP3 from "../audio/woman1.mp3"
 import {useState} from "react";
-
-declare global {
-    var sound: HTMLAudioElement;
-}
+import {useAudioContext} from "../context/AudioContext";
 
 function RaceNav() {
     const bgcolor = "salmon"
@@ -26,24 +23,28 @@ function RaceNav() {
 
     const personInfo = [
         {
+            id: 1,
             race: "Caucasian",
             image: White,
             audio: white1,
             path: "/caucasian"
         },
         {
+            id: 2,
             race: "African American",
             image: Black,
             audio: af1,
             path: "/africanamerican"
         },
         {
+            id: 3,
             race: "Asian",
             image: Asian,
             audio: asian1,
             path: "/asian"
         },
         {
+            id: 4,
             race: "Female",
             image: Woman,
             audio: woman1,
@@ -53,20 +54,16 @@ function RaceNav() {
 
     const navigate = useNavigate()
     const {triggerScroll, setTriggerScroll} = useTriggerScroll()
-
+    const {playAudio, stopAudio} = useAudioContext()
 
     function handleClick(path: string) {
         navigate(path)
         setTriggerScroll(!triggerScroll)
+        stopAudio()
     }
 
-    function handleHover(sound: HTMLAudioElement) {
-        if(globalThis.sound) {
-            globalThis.sound!.pause()
-            globalThis.sound!.currentTime = 0
-        }
-        globalThis.sound = sound
-        globalThis.sound.play()
+    function handleHover(sound: HTMLAudioElement, id: number) {
+        playAudio(sound, id)
     }
 
     return (
@@ -82,7 +79,7 @@ function RaceNav() {
                                 <Image
                                     src={x.image}
                                     onClick={() => handleClick(x.path)}
-                                    onMouseEnter={() => handleHover(x.audio)}
+                                    onMouseEnter={() => handleHover(x.audio, x.id)}
                                     fit={"contain"}
                                     sx={{
                                         cursor: "pointer"

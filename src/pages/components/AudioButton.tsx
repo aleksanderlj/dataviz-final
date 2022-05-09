@@ -1,35 +1,34 @@
 import {Box} from "@mui/material";
 import Image from "mui-image";
-import AudioIcon from "../../images/audio_icon.png";
+import PlayIcon from "../../images/play.png"
+import StopIcon from "../../images/stop.png"
 import React, {useState} from "react";
-
-declare global {
-    var age: number;
-}
+import {useAudioContext} from "../../context/AudioContext";
 
 export interface AudioButtonProps {
+    id: number;
     audio: string;
 }
 
 function AudioButton(props: AudioButtonProps) {
     const [audio, setAudio] = useState<HTMLAudioElement>(new Audio(props.audio))
+    const {audioId, playAudio, stopAudio} = useAudioContext()
 
-    function handleSound(sound: HTMLAudioElement) {
-        if(globalThis.sound) {
-            globalThis.sound!.pause()
-            globalThis.sound!.currentTime = 0
+    function handleSound(audio: HTMLAudioElement, id: number) {
+        if(audioId === id) {
+            stopAudio()
+        } else {
+            playAudio(audio, id)
         }
-        globalThis.sound = sound
-        globalThis.sound.play()
     }
 
     return (
         <Box width={"50%"}>
             <Image
-                src={AudioIcon}
+                src={audioId === props.id ? StopIcon : PlayIcon}
                 duration={100}
                 fit={"contain"}
-                onClick={() => handleSound(audio)}
+                onClick={() => handleSound(audio, props.id)}
                 sx={{
                     cursor: "pointer"
             }}/>

@@ -10,6 +10,7 @@ import Degree from "../images/degree.png"
 import Private from "../images/private.png"
 import {useTriggerScroll} from "../context/TriggerScrollContext";
 import AudioButton from "./components/AudioButton";
+import {useAudioContext} from "../context/AudioContext";
 
 export interface PersonPageProps {
     target: string;
@@ -28,6 +29,7 @@ export interface PersonPageProps {
 function PersonPage(props: PersonPageProps) {
     const {triggerScroll} = useTriggerScroll()
     const [tooltipOpen, setTooltipOpen] = useState(true)
+    const {stopAudio} = useAudioContext()
 
     useEffect(() => {
         window.scrollTo({
@@ -65,7 +67,7 @@ function PersonPage(props: PersonPageProps) {
                         placement={"left"}
                     >
                         <Box justifyContent={"center"} onMouseEnter={handleTooltipHover}>
-                            <AudioButton audio={props.mapSound} />
+                            <AudioButton id={5} audio={props.mapSound} />
                         </Box>
                     </Tooltip>
                 </Grid>
@@ -91,7 +93,7 @@ function PersonPage(props: PersonPageProps) {
                 </Grid>
                 <Grid container item xs={3} alignItems={"center"}>
                     <Grid container item xs={8} justifyContent={"right"} alignItems={"center"}>
-                        <AudioButton audio={props.fiSound} />
+                        <AudioButton id={6} audio={props.fiSound} />
                     </Grid>
                 </Grid>
 
@@ -112,7 +114,7 @@ function PersonPage(props: PersonPageProps) {
                 </Grid>
 
                 <Grid container item xs={2} alignItems={"center"}>
-                    <AudioButton audio={props.boxplotSound} />
+                    <AudioButton id={7} audio={props.boxplotSound} />
                 </Grid>
 
                 <TextBody xs={9} text={replaceTarget("The boxplot tells us a little about how the ratio of enrolled {target} are affected by cost of tuition.")}/>

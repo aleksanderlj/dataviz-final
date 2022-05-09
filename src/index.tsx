@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {HashRouter} from "react-router-dom";
 import smoothscroll from "smoothscroll-polyfill"
 import TriggerScrollProvider from "./context/TriggerScrollContext";
+import AudioProvider from "./context/AudioContext";
 
 smoothscroll.polyfill()
 
@@ -15,9 +16,11 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <TriggerScrollProvider value={false}>
-            <HashRouter>
-                <App />
-            </HashRouter>
+            <AudioProvider>
+                <HashRouter>
+                    <App />
+                </HashRouter>
+            </AudioProvider>
         </TriggerScrollProvider>
     </React.StrictMode>
 );
