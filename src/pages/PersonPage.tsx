@@ -1,14 +1,15 @@
-import {Box, Grid, Stack, Typography} from "@mui/material";
+import {Box, Grid, Stack, Tooltip, Typography} from "@mui/material";
 import FoliumMap from "./components/FoliumMap";
 import Image from "mui-image"
-import {useEffect} from "react";
-import TextWithAudio from "./components/TextWithAudio";
+import {useEffect, useState} from "react";
+import TextBody from "./components/TextBody";
 import FeatureBox from "./components/FeatureBox";
 import Location from "../images/cityscape.png"
 import Religion from "../images/bible.png"
 import Degree from "../images/degree.png"
 import Private from "../images/private.png"
 import {useTriggerScroll} from "../context/TriggerScrollContext";
+import AudioButton from "./components/AudioButton";
 
 export interface PersonPageProps {
     target: string;
@@ -23,6 +24,7 @@ export interface PersonPageProps {
 
 function PersonPage(props: PersonPageProps) {
     const {triggerScroll} = useTriggerScroll()
+    const [tooltipOpen, setTooltipOpen] = useState(true)
 
     useEffect(() => {
         window.scrollTo({
@@ -39,6 +41,10 @@ function PersonPage(props: PersonPageProps) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 
+    function handleTooltipHover(){
+        setTooltipOpen(false)
+    }
+
     return (
         <Grid container justifyContent={"center"}>
             <Grid container item xs={8} justifyContent={"center"} rowSpacing={4}>
@@ -48,6 +54,18 @@ function PersonPage(props: PersonPageProps) {
                     </Typography>
                 </Grid>
 
+                <Grid container item xs={2} alignItems={"center"}>
+                    <Tooltip
+                        arrow
+                        title={"Click me!"}
+                        open={tooltipOpen}
+                        placement={"left"}
+                    >
+                        <Box justifyContent={"center"} onMouseEnter={handleTooltipHover}>
+                            <AudioButton />
+                        </Box>
+                    </Tooltip>
+                </Grid>
                 <Grid item xs={8}>
                     <Typography variant={"h6"}>
                         {"Under- and overrepresentation in each state"}
@@ -57,16 +75,22 @@ function PersonPage(props: PersonPageProps) {
                         <FoliumMap src={props.map}/>
                     }
                 </Grid>
+                <Grid item xs={2}/>
 
-                <TextWithAudio text={replaceTarget("This map shows how {target} are represented by university enrollment in regard to how many {target} live in the given state.\n" +
-                    "The red areas represent states where the average enrollment ratio of {target} is less than the ratio of {target} in that state's population." +
+                <TextBody text={replaceTarget("This map shows how {target} are represented by university enrollment in regard to how many {target} live in the given state.\n" +
+                    "The red areas represent states where the average enrollment ratio of {target} is less than the ratio of {target} in that state's population. " +
                     "This means {target} are underrepresented in those states.\n" +
                     "The green areas represent the opposite, meaning an overrepresentation.")}/>
+
 
                 <Grid item xs={8}>
                     <Image src={props.featureImportance} duration={100}/>
                 </Grid>
-                <Box width={"100%"}/>
+                <Grid container item xs={3} alignItems={"center"}>
+                    <Grid container item xs={8} justifyContent={"right"} alignItems={"center"}>
+                        <AudioButton />
+                    </Grid>
+                </Grid>
 
                 <Grid item xs={6}>
                     <Stack direction={"row"} spacing={6}>
@@ -77,15 +101,18 @@ function PersonPage(props: PersonPageProps) {
                     </Stack>
                 </Grid>
 
-                <TextWithAudio text={replaceTarget("The above graph shows what features are most important in deciding the enrollment of {target} in universities,\n and in which direction.\n" +
+                <TextBody text={replaceTarget("The above graph shows what features are most important in deciding the enrollment of {target} in universities,\n and in which direction.\n" +
                     "Below the graph we've also highlighted some interesting features that seem to be of importance for all races and genders\n(try to hover over them!).")}/>
 
                 <Grid item xs={12}>
                     <Image src={props.boxPlot} duration={100}/>
                 </Grid>
-                <Box width={"100%"}/>
 
-                <TextWithAudio text={replaceTarget("The boxplot tells us a little about how the ratio of enrolled {target} are affected by cost of tuition.")}/>
+                <Grid container item xs={2} alignItems={"center"}>
+                    <AudioButton />
+                </Grid>
+
+                <TextBody xs={9} text={replaceTarget("The boxplot tells us a little about how the ratio of enrolled {target} are affected by cost of tuition.")}/>
 
                 <Grid item xs={12} sx={{ mt: "4rem" }}>
                     <Typography variant={"h6"}>
