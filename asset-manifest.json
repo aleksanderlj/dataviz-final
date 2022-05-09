@@ -1,15 +1,30 @@
 {
   "files": {
     "main.css": "/dataviz-final/static/css/main.073c9b0a.css",
-    "main.js": "/dataviz-final/static/js/main.35277199.js",
+    "main.js": "/dataviz-final/static/js/main.6245c0f3.js",
     "static/js/787.aea70ee3.chunk.js": "/dataviz-final/static/js/787.aea70ee3.chunk.js",
-    "static/media/song.mp3": "/dataviz-final/static/media/song.e03529f1257a604b2668.mp3",
-    "static/media/gong.mp3": "/dataviz-final/static/media/gong.95e6ba3007f4e96ef2a4.mp3",
+    "static/media/white2.mp3": "/dataviz-final/static/media/white2.9212e4390e02eafc196c.mp3",
+    "static/media/woman3.mp3": "/dataviz-final/static/media/woman3.9d666ae6087e6ed46a1e.mp3",
+    "static/media/white3.mp3": "/dataviz-final/static/media/white3.75f56a73a239b546b932.mp3",
+    "static/media/af3.mp3": "/dataviz-final/static/media/af3.7b9cb8c4ddbc6c43ae64.mp3",
+    "static/media/asian2.mp3": "/dataviz-final/static/media/asian2.485a5d92e9f2ff1858f0.mp3",
+    "static/media/woman2.mp3": "/dataviz-final/static/media/woman2.9c7e0db11b1773f55622.mp3",
+    "static/media/af2.mp3": "/dataviz-final/static/media/af2.ee581d1c2122d760c072.mp3",
+    "static/media/asian3.mp3": "/dataviz-final/static/media/asian3.293d3bf881229446fa30.mp3",
+    "static/media/asian4.mp3": "/dataviz-final/static/media/asian4.e45e84952729da470180.mp3",
+    "static/media/woman4.mp3": "/dataviz-final/static/media/woman4.90080419ba7ba7b319d4.mp3",
+    "static/media/white4.mp3": "/dataviz-final/static/media/white4.34a9bf401f10c3dc7265.mp3",
+    "static/media/af4.mp3": "/dataviz-final/static/media/af4.1c24332d32b4715285df.mp3",
     "static/media/black_person.png": "/dataviz-final/static/media/black_person.d14e56bc692de857511d.png",
     "static/media/white_person.png": "/dataviz-final/static/media/white_person.a4ce121ff223707271ed.png",
+    "static/media/af1.mp3": "/dataviz-final/static/media/af1.a070ed1e34b523411b56.mp3",
+    "static/media/asian1.mp3": "/dataviz-final/static/media/asian1.d3f7a41696a1a7159934.mp3",
+    "static/media/white1.mp3": "/dataviz-final/static/media/white1.f53312c024f689a4735b.mp3",
+    "static/media/woman1.mp3": "/dataviz-final/static/media/woman1.fb583871794243f72084.mp3",
     "static/media/woman_person.png": "/dataviz-final/static/media/woman_person.e98fcdfa90dfea2ce7eb.png",
     "static/media/asian_person.png": "/dataviz-final/static/media/asian_person.498338e3c0009b3508e4.png",
-    "static/media/audio_icon.png": "/dataviz-final/static/media/audio_icon.f2cc2d97ddb3bc272c05.png",
+    "static/media/play.png": "/dataviz-final/static/media/play.c2be0b5656fa0f505c95.png",
+    "static/media/stop.png": "/dataviz-final/static/media/stop.7a80e8db24e0513fa21f.png",
     "static/media/Percent_of_total_enrollment_that_are_Black_or_African_American.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_Black_or_African_American.3456a673e165566ad00d.png",
     "static/media/Percent_of_total_enrollment_that_are_Asian.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_Asian.9f67b309b31309a57ab6.png",
     "static/media/Percent_of_total_enrollment_that_are_White.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_White.9368864e5638b86f2d1d.png",
@@ -23,11 +38,11 @@
     "static/media/bible.png": "/dataviz-final/static/media/bible.aac0ff4aab5c08a41271.png",
     "index.html": "/dataviz-final/index.html",
     "main.073c9b0a.css.map": "/dataviz-final/static/css/main.073c9b0a.css.map",
-    "main.35277199.js.map": "/dataviz-final/static/js/main.35277199.js.map",
+    "main.6245c0f3.js.map": "/dataviz-final/static/js/main.6245c0f3.js.map",
     "787.aea70ee3.chunk.js.map": "/dataviz-final/static/js/787.aea70ee3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.35277199.js"
+    "static/js/main.6245c0f3.js"
   ]
 }
