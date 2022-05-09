@@ -14,12 +14,15 @@ import AudioButton from "./components/AudioButton";
 export interface PersonPageProps {
     target: string;
     map: string; // eg. plots/map_white.html
+    mapSound: string;
     featureImportance: string;
     locationPerc: number;
     privatePerc: number;
     religiousPerc: number;
     degreePerc: number;
-    boxPlot: string;
+    fiSound: string
+    boxplot: string;
+    boxplotSound: string
 }
 
 function PersonPage(props: PersonPageProps) {
@@ -62,7 +65,7 @@ function PersonPage(props: PersonPageProps) {
                         placement={"left"}
                     >
                         <Box justifyContent={"center"} onMouseEnter={handleTooltipHover}>
-                            <AudioButton />
+                            <AudioButton audio={props.mapSound} />
                         </Box>
                     </Tooltip>
                 </Grid>
@@ -88,7 +91,7 @@ function PersonPage(props: PersonPageProps) {
                 </Grid>
                 <Grid container item xs={3} alignItems={"center"}>
                     <Grid container item xs={8} justifyContent={"right"} alignItems={"center"}>
-                        <AudioButton />
+                        <AudioButton audio={props.fiSound} />
                     </Grid>
                 </Grid>
 
@@ -105,11 +108,11 @@ function PersonPage(props: PersonPageProps) {
                     "Below the graph we've also highlighted some interesting features that seem to be of importance for all races and genders\n(try to hover over them!).")}/>
 
                 <Grid item xs={12}>
-                    <Image src={props.boxPlot} duration={100}/>
+                    <Image src={props.boxplot} duration={100}/>
                 </Grid>
 
                 <Grid container item xs={2} alignItems={"center"}>
-                    <AudioButton />
+                    <AudioButton audio={props.boxplotSound} />
                 </Grid>
 
                 <TextBody xs={9} text={replaceTarget("The boxplot tells us a little about how the ratio of enrolled {target} are affected by cost of tuition.")}/>

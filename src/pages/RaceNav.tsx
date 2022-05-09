@@ -6,39 +6,47 @@ import White from "../images/white_person.png"
 import Black from "../images/black_person.png"
 import Asian from "../images/asian_person.png"
 import Woman from "../images/woman_person.png"
-import GongMP3 from "../audio/gong.mp3"
-import SongMP3 from "../audio/song.mp3"
+import af1MP3 from "../audio/af1.mp3"
+import asian1MP3 from "../audio/asian1.mp3"
+import white1MP3 from "../audio/white1.mp3"
+import woman1MP3 from "../audio/woman1.mp3"
 import {useState} from "react";
+
+declare global {
+    var sound: HTMLAudioElement;
+}
 
 function RaceNav() {
     const bgcolor = "salmon"
 
-    const [song, setSong] = useState(new Audio(SongMP3))
-    const [gong, setGong] = useState(new Audio(GongMP3))
+    const [white1, setWhite1] = useState<HTMLAudioElement>(new Audio(white1MP3))
+    const [af1, setAf1] = useState<HTMLAudioElement>(new Audio(af1MP3))
+    const [asian1, setAsian1] = useState<HTMLAudioElement>(new Audio(asian1MP3))
+    const [woman1, setWoman1] = useState<HTMLAudioElement>(new Audio(woman1MP3))
 
     const personInfo = [
         {
             race: "Caucasian",
             image: White,
-            audio: song,
+            audio: white1,
             path: "/caucasian"
         },
         {
             race: "African American",
             image: Black,
-            audio: gong,
+            audio: af1,
             path: "/africanamerican"
         },
         {
             race: "Asian",
             image: Asian,
-            audio: gong,
+            audio: asian1,
             path: "/asian"
         },
         {
             race: "Female",
             image: Woman,
-            audio: gong,
+            audio: woman1,
             path: "/female"
         }
     ]
@@ -53,11 +61,12 @@ function RaceNav() {
     }
 
     function handleHover(sound: HTMLAudioElement) {
-        personInfo.map((x) => {
-            x.audio.pause();
-            x.audio.currentTime = 0;
-        })
-        sound.play()
+        if(globalThis.sound) {
+            globalThis.sound!.pause()
+            globalThis.sound!.currentTime = 0
+        }
+        globalThis.sound = sound
+        globalThis.sound.play()
     }
 
     return (
@@ -68,7 +77,7 @@ function RaceNav() {
                 <Stack direction={"row"} spacing={6} height={"70%"}>
                     {
                         personInfo.map((x) => (
-                            <Tooltip title={"Click me!"} placement={"top"} arrow open>
+                            <Tooltip key={x.race} title={"Click me!"} placement={"top"} arrow open>
                                 <Box>
                                 <Image
                                     src={x.image}
