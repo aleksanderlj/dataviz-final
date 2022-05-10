@@ -1,23 +1,35 @@
 {
   "files": {
     "main.css": "/dataviz-final/static/css/main.073c9b0a.css",
-    "main.js": "/dataviz-final/static/js/main.a9c5ebb5.js",
+    "main.js": "/dataviz-final/static/js/main.d1b1fc27.js",
     "static/js/787.aea70ee3.chunk.js": "/dataviz-final/static/js/787.aea70ee3.chunk.js",
     "static/media/woman3.mp3": "/dataviz-final/static/media/woman3.ceb958209eb2df887fc6.mp3",
+    "static/media/white2_legacy.mp3": "/dataviz-final/static/media/white2_legacy.9212e4390e02eafc196c.mp3",
+    "static/media/woman3_legacy.mp3": "/dataviz-final/static/media/woman3_legacy.9d666ae6087e6ed46a1e.mp3",
+    "static/media/white3_legacy.mp3": "/dataviz-final/static/media/white3_legacy.75f56a73a239b546b932.mp3",
+    "static/media/af3_legacy.mp3": "/dataviz-final/static/media/af3_legacy.7b9cb8c4ddbc6c43ae64.mp3",
     "static/media/woman2.mp3": "/dataviz-final/static/media/woman2.cdafec7dd5ebfd38a63a.mp3",
     "static/media/asian2.mp3": "/dataviz-final/static/media/asian2.485a5d92e9f2ff1858f0.mp3",
+    "static/media/woman2_legacy.mp3": "/dataviz-final/static/media/woman2_legacy.9c7e0db11b1773f55622.mp3",
     "static/media/white2.mp3": "/dataviz-final/static/media/white2.76c4ce371d9a297510cf.mp3",
+    "static/media/af2_legacy.mp3": "/dataviz-final/static/media/af2_legacy.ee581d1c2122d760c072.mp3",
     "static/media/woman4.mp3": "/dataviz-final/static/media/woman4.e68fc9cff56057cb0b49.mp3",
     "static/media/asian3.mp3": "/dataviz-final/static/media/asian3.293d3bf881229446fa30.mp3",
     "static/media/white3.mp3": "/dataviz-final/static/media/white3.7a86dd4aef087ca1a664.mp3",
     "static/media/af3.mp3": "/dataviz-final/static/media/af3.ea12f5a5f55798c94bfc.mp3",
     "static/media/asian4.mp3": "/dataviz-final/static/media/asian4.e45e84952729da470180.mp3",
+    "static/media/woman4_legacy.mp3": "/dataviz-final/static/media/woman4_legacy.90080419ba7ba7b319d4.mp3",
     "static/media/af2.mp3": "/dataviz-final/static/media/af2.a0fc96b5d9fe8b5b7cb7.mp3",
+    "static/media/white4_legacy.mp3": "/dataviz-final/static/media/white4_legacy.34a9bf401f10c3dc7265.mp3",
+    "static/media/af4_legacy.mp3": "/dataviz-final/static/media/af4_legacy.1c24332d32b4715285df.mp3",
     "static/media/white4.mp3": "/dataviz-final/static/media/white4.6838fd1ea82fc1835d9e.mp3",
     "static/media/af4.mp3": "/dataviz-final/static/media/af4.a11070961e79b5442cbe.mp3",
     "static/media/black_person.png": "/dataviz-final/static/media/black_person.d14e56bc692de857511d.png",
     "static/media/white_person.png": "/dataviz-final/static/media/white_person.a4ce121ff223707271ed.png",
+    "static/media/af1_legacy.mp3": "/dataviz-final/static/media/af1_legacy.a070ed1e34b523411b56.mp3",
     "static/media/asian1.mp3": "/dataviz-final/static/media/asian1.d3f7a41696a1a7159934.mp3",
+    "static/media/white1_legacy.mp3": "/dataviz-final/static/media/white1_legacy.f53312c024f689a4735b.mp3",
+    "static/media/woman1_legacy.mp3": "/dataviz-final/static/media/woman1_legacy.fb583871794243f72084.mp3",
     "static/media/white1.mp3": "/dataviz-final/static/media/white1.e58acc9b3ab8d9e8dfa1.mp3",
     "static/media/woman_person.png": "/dataviz-final/static/media/woman_person.e98fcdfa90dfea2ce7eb.png",
     "static/media/af1.mp3": "/dataviz-final/static/media/af1.8a9ecde0e5dfd3e65aff.mp3",
@@ -38,11 +50,11 @@
     "static/media/bible.png": "/dataviz-final/static/media/bible.aac0ff4aab5c08a41271.png",
     "index.html": "/dataviz-final/index.html",
     "main.073c9b0a.css.map": "/dataviz-final/static/css/main.073c9b0a.css.map",
-    "main.a9c5ebb5.js.map": "/dataviz-final/static/js/main.a9c5ebb5.js.map",
+    "main.d1b1fc27.js.map": "/dataviz-final/static/js/main.d1b1fc27.js.map",
     "787.aea70ee3.chunk.js.map": "/dataviz-final/static/js/787.aea70ee3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.a9c5ebb5.js"
+    "static/js/main.d1b1fc27.js"
   ]
 }
