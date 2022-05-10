@@ -1,6 +1,6 @@
 import {Grid} from "@mui/material";
 import RaceNav from "./RaceNav";
-import {Route, Routes} from "react-router-dom"
+import {Route, Routes, useNavigate} from "react-router-dom"
 import Caucasian from "./persons/Caucasian";
 import ScrollToTop from "react-scroll-to-top";
 import Black from "./persons/Black";
@@ -8,10 +8,17 @@ import Asian from "./persons/Asian";
 import Woman from "./persons/Woman";
 import IntroPage from "./IntroPage";
 import LegacyButton from "./components/Legacy button";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 function Main() {
     const [firstClick, setFirstClick] = useState(false)
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if(!firstClick) {
+            navigate("/", {replace: true})
+        }
+    }, [firstClick])
 
     return (
         <Grid container justifyContent={"center"}>
