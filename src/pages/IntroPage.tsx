@@ -1,15 +1,18 @@
 import {Grid, Typography, Button} from "@mui/material";
 import {ArrowDownward} from "@mui/icons-material";
 
-function IntroPage() {
+function IntroPage(props: any) {
     const bgcolor = "black"
     const fgcolor = "grey.300"
 
     function handleClick(){
-        window.scrollTo({
-            top: window.innerHeight,
-            behavior: "smooth"
-        })
+        if(props.firstClick) {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth"
+            })
+        }
+        props.setFirstClick(true)
     }
 
     return (

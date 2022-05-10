@@ -8,20 +8,27 @@ import Asian from "./persons/Asian";
 import Woman from "./persons/Woman";
 import IntroPage from "./IntroPage";
 import LegacyButton from "./components/Legacy button";
+import {useState} from "react";
 
 function Main() {
+    const [firstClick, setFirstClick] = useState(false)
+
     return (
         <Grid container justifyContent={"center"}>
-            <IntroPage/>
-            <RaceNav/>
-            <Grid container item justifyContent={"center"} xs={12}>
-                <Routes>
-                    <Route path={"/caucasian"} element={<Caucasian/>}/>
-                    <Route path={"/africanamerican"} element={<Black/>}/>
-                    <Route path={"/asian"} element={<Asian/>}/>
-                    <Route path={"/female"} element={<Woman/>}/>
-                </Routes>
-            </Grid>
+            <IntroPage firstClick={firstClick} setFirstClick={setFirstClick}/>
+            {firstClick ?
+                <>
+                    <RaceNav firstClick={firstClick}/>
+                    <Grid container item justifyContent={"center"} xs={12}>
+                        <Routes>
+                            <Route path={"/caucasian"} element={<Caucasian/>}/>
+                            <Route path={"/africanamerican"} element={<Black/>}/>
+                            <Route path={"/asian"} element={<Asian/>}/>
+                            <Route path={"/female"} element={<Woman/>}/>
+                        </Routes>
+                    </Grid>
+                </> : null
+            }
             <ScrollToTop smooth/>
             <LegacyButton/>
         </Grid>

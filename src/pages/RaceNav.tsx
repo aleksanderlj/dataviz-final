@@ -17,7 +17,7 @@ import {useEffect, useState} from "react";
 import {useAudioContext} from "../context/AudioContext";
 import {useLegacyContext} from "../context/LegacyContext";
 
-function RaceNav() {
+function RaceNav(props: any) {
     const bgcolor = "salmon"
     const {legacy} = useLegacyContext()
 
@@ -37,6 +37,13 @@ function RaceNav() {
             setWoman1(new Audio(woman1MP3))
         }
     }, [legacy])
+
+    useEffect(() => {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth"
+        })
+    }, [props.firstClick])
 
     const personInfo = [
         {
