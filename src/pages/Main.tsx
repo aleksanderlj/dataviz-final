@@ -11,10 +11,9 @@ import LegacyButton from "./components/Legacy button";
 
 function Main() {
     return (
-        <Grid container justifyContent={"center"} sx={{ pb: "2rem"}}>
+        <Grid container justifyContent={"center"}>
             <IntroPage/>
             <RaceNav/>
-            <ScrollToTop smooth/>
             <Grid container item justifyContent={"center"} xs={12}>
                 <Routes>
                     <Route path={"/caucasian"} element={<Caucasian/>}/>
@@ -23,6 +22,7 @@ function Main() {
                     <Route path={"/female"} element={<Woman/>}/>
                 </Routes>
             </Grid>
+            <ScrollToTop smooth/>
             <LegacyButton/>
         </Grid>
     )

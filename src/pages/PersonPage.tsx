@@ -1,4 +1,4 @@
-import {Box, Grid, Stack, Tooltip, Typography} from "@mui/material";
+import {Box, Button, Grid, Stack, Tooltip, Typography} from "@mui/material";
 import FoliumMap from "./components/FoliumMap";
 import Image from "mui-image"
 import {useEffect, useState} from "react";
@@ -11,6 +11,7 @@ import Private from "../images/private.png"
 import {useTriggerScroll} from "../context/TriggerScrollContext";
 import AudioButton from "./components/AudioButton";
 import {useAudioContext} from "../context/AudioContext";
+import {ArrowUpward} from "@mui/icons-material";
 
 export interface PersonPageProps {
     target: string;
@@ -37,6 +38,13 @@ function PersonPage(props: PersonPageProps) {
             behavior: "smooth"
         })
     }, [triggerScroll])
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth"
+        })
+    }
 
     function replaceTarget(str: string){
         return str.replaceAll("{target}", props.target)
@@ -125,6 +133,13 @@ function PersonPage(props: PersonPageProps) {
                     <Typography variant={"h6"}>
                         {"Scroll to the top of the page and hear what one of the other characters have to say!"}
                     </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{pb: "2rem"}}>
+                    <Button
+                        onClick={scrollToTop}
+                        variant={"contained"}
+                        startIcon={<ArrowUpward/>}
+                    >{"Scroll to top"}</Button>
                 </Grid>
             </Grid>
         </Grid>

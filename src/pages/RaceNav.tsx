@@ -91,7 +91,7 @@ function RaceNav() {
                 <Stack direction={"row"} spacing={6} height={"70%"}>
                     {
                         personInfo.map((x) => (
-                            <Tooltip key={x.race} title={"Click me!"} placement={"top"} arrow open>
+                            <Tooltip key={x.race} title={"Hover over me!"} placement={"top"} arrow open>
                                 <Box>
                                 <Image
                                     src={x.image}
