@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dataviz-final/static/css/main.073c9b0a.css",
-    "main.js": "/dataviz-final/static/js/main.6dad7f60.js",
+    "main.js": "/dataviz-final/static/js/main.9d586760.js",
     "static/js/787.aea70ee3.chunk.js": "/dataviz-final/static/js/787.aea70ee3.chunk.js",
     "static/media/white2.mp3": "/dataviz-final/static/media/white2.8da771413cbfeff204ee.mp3",
     "static/media/white3.mp3": "/dataviz-final/static/media/white3.fb9697720ea9b02ac015.mp3",
@@ -19,10 +19,10 @@
     "static/media/asian4.mp3": "/dataviz-final/static/media/asian4.e45e84952729da470180.mp3",
     "static/media/black_person.png": "/dataviz-final/static/media/black_person.d14e56bc692de857511d.png",
     "static/media/white_person.png": "/dataviz-final/static/media/white_person.a4ce121ff223707271ed.png",
-    "static/media/woman1.mp3": "/dataviz-final/static/media/woman1.3bed7adced1f64fbf937.mp3",
     "static/media/asian1.mp3": "/dataviz-final/static/media/asian1.d3f7a41696a1a7159934.mp3",
     "static/media/woman_person.png": "/dataviz-final/static/media/woman_person.e98fcdfa90dfea2ce7eb.png",
     "static/media/asian_person.png": "/dataviz-final/static/media/asian_person.498338e3c0009b3508e4.png",
+    "static/media/woman1.mp3": "/dataviz-final/static/media/woman1.4f41ebfd468225649e5e.mp3",
     "static/media/play.png": "/dataviz-final/static/media/play.c2be0b5656fa0f505c95.png",
     "static/media/stop.png": "/dataviz-final/static/media/stop.7a80e8db24e0513fa21f.png",
     "static/media/Percent_of_total_enrollment_that_are_Black_or_African_American.png": "/dataviz-final/static/media/Percent_of_total_enrollment_that_are_Black_or_African_American.3456a673e165566ad00d.png",
@@ -38,11 +38,11 @@
     "static/media/bible.png": "/dataviz-final/static/media/bible.aac0ff4aab5c08a41271.png",
     "index.html": "/dataviz-final/index.html",
     "main.073c9b0a.css.map": "/dataviz-final/static/css/main.073c9b0a.css.map",
-    "main.6dad7f60.js.map": "/dataviz-final/static/js/main.6dad7f60.js.map",
+    "main.9d586760.js.map": "/dataviz-final/static/js/main.9d586760.js.map",
     "787.aea70ee3.chunk.js.map": "/dataviz-final/static/js/787.aea70ee3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.6dad7f60.js"
+    "static/js/main.9d586760.js"
   ]
 }
