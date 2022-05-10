@@ -10,16 +10,33 @@ import af1MP3 from "../audio/af1.mp3"
 import asian1MP3 from "../audio/asian1.mp3"
 import white1MP3 from "../audio/white1.mp3"
 import woman1MP3 from "../audio/woman1.mp3"
-import {useState} from "react";
+import af1MP3_legacy from "../audio/af1_legacy.mp3"
+import white1MP3_legacy from "../audio/white1_legacy.mp3"
+import woman1MP3_legacy from "../audio/woman1_legacy.mp3"
+import {useEffect, useState} from "react";
 import {useAudioContext} from "../context/AudioContext";
+import {useLegacyContext} from "../context/LegacyContext";
 
 function RaceNav() {
     const bgcolor = "salmon"
+    const {legacy} = useLegacyContext()
 
     const [white1, setWhite1] = useState<HTMLAudioElement>(new Audio(white1MP3))
     const [af1, setAf1] = useState<HTMLAudioElement>(new Audio(af1MP3))
     const [asian1, setAsian1] = useState<HTMLAudioElement>(new Audio(asian1MP3))
     const [woman1, setWoman1] = useState<HTMLAudioElement>(new Audio(woman1MP3))
+
+    useEffect(() => {
+        if(legacy){
+            setWhite1(new Audio(white1MP3_legacy))
+            setAf1(new Audio(af1MP3_legacy))
+            setWoman1(new Audio(woman1MP3_legacy))
+        } else {
+            setWhite1(new Audio(white1MP3))
+            setAf1(new Audio(af1MP3))
+            setWoman1(new Audio(woman1MP3))
+        }
+    }, [legacy])
 
     const personInfo = [
         {

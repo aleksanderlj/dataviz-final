@@ -7,6 +7,7 @@ import {HashRouter} from "react-router-dom";
 import smoothscroll from "smoothscroll-polyfill"
 import TriggerScrollProvider from "./context/TriggerScrollContext";
 import AudioProvider from "./context/AudioContext";
+import LegacyProvider from "./context/LegacyContext";
 
 smoothscroll.polyfill()
 
@@ -17,9 +18,11 @@ root.render(
     <React.StrictMode>
         <TriggerScrollProvider value={false}>
             <AudioProvider>
-                <HashRouter>
-                    <App />
-                </HashRouter>
+                <LegacyProvider>
+                    <HashRouter>
+                        <App />
+                    </HashRouter>
+                </LegacyProvider>
             </AudioProvider>
         </TriggerScrollProvider>
     </React.StrictMode>

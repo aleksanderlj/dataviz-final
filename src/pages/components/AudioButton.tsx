@@ -2,16 +2,15 @@ import {Box} from "@mui/material";
 import Image from "mui-image";
 import PlayIcon from "../../images/play.png"
 import StopIcon from "../../images/stop.png"
-import React, {useState} from "react";
+import React from "react";
 import {useAudioContext} from "../../context/AudioContext";
 
 export interface AudioButtonProps {
     id: number;
-    audio: string;
+    audio: HTMLAudioElement;
 }
 
 function AudioButton(props: AudioButtonProps) {
-    const [audio, setAudio] = useState<HTMLAudioElement>(new Audio(props.audio))
     const {audioId, playAudio, stopAudio} = useAudioContext()
 
     function handleSound(audio: HTMLAudioElement, id: number) {
@@ -28,7 +27,7 @@ function AudioButton(props: AudioButtonProps) {
                 src={audioId === props.id ? StopIcon : PlayIcon}
                 duration={100}
                 fit={"contain"}
-                onClick={() => handleSound(audio, props.id)}
+                onClick={() => handleSound(props.audio, props.id)}
                 sx={{
                     cursor: "pointer"
             }}/>

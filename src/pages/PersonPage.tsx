@@ -15,15 +15,15 @@ import {useAudioContext} from "../context/AudioContext";
 export interface PersonPageProps {
     target: string;
     map: string; // eg. plots/map_white.html
-    mapSound: string;
+    mapSound: HTMLAudioElement;
     featureImportance: string;
     locationPerc: number;
     privatePerc: number;
     religiousPerc: number;
     degreePerc: number;
-    fiSound: string
+    fiSound: HTMLAudioElement;
     boxplot: string;
-    boxplotSound: string
+    boxplotSound: HTMLAudioElement;
 }
 
 function PersonPage(props: PersonPageProps) {

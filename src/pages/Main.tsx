@@ -7,6 +7,7 @@ import Black from "./persons/Black";
 import Asian from "./persons/Asian";
 import Woman from "./persons/Woman";
 import IntroPage from "./IntroPage";
+import LegacyButton from "./components/Legacy button";
 
 function Main() {
     return (
@@ -22,6 +23,7 @@ function Main() {
                     <Route path={"/female"} element={<Woman/>}/>
                 </Routes>
             </Grid>
+            <LegacyButton/>
         </Grid>
     )
 }
